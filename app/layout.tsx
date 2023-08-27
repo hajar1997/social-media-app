@@ -1,10 +1,12 @@
 import '../styles/reset.css';
 import '../styles/globals.css';
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from '@fortawesome/fontawesome-svg-core';
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { Footer, Navbar } from '@/components';
+import { Footer, Navbar, Sidebar } from '@/components';
 import styles from '../styles/styles.module.css'
-
+config.autoAddCss = false;
 const inter = Inter({
   subsets: ['latin']
 })
@@ -21,12 +23,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
-      <body className="container mx-auto px-[30px] py-4">
-        <div className={styles.body}>
-          <Navbar />
-          {children}
-          <Footer />
-        </div>
+      <body className={`${styles.wrapper} container mx-auto px-[80px] py-4 bg-body text-white`}>
+        <Navbar />
+        {children}
+        <Sidebar />
+        <Footer />
       </body>
     </html>
   )

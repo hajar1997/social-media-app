@@ -1,5 +1,43 @@
-.body{
-    display: flex;
-    flex-direction: row;
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
     gap: 20px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "navbar main sidebar"
+        "navbar main sidebar"
+        "footer footer footer";
+    min-height: 100vh;
+    align-items: start;
 }
+
+
+.navbar {
+    position: sticky;
+    top: 20px;
+    height: 100vh;
+    grid-area: navbar;
+    border-right: 1px solid #292929;
+    padding-right: 15px;
+    margin-bottom: 40px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+
+.main {
+    grid-area: main;
+
+}
+
+.sign_in_btn {
+    background-color: #e3694a !important;
+}
+
+/* @media screen and (max-width:992px) {
+    .navbar{
+        display: none;
+    }
+} */
