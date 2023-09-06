@@ -23,3 +23,23 @@
     color: #ececec !important;
     font-size: 13px !important;
 }
+
+.active-button {
+    background-color: black !important;
+    color: white;
+}
+
+.active-button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.inactive-button {
+    background-color: rgba(33, 37, 41, 0.75) !important;
+    color: #6c757d !important;
+}
+
+.inactive-button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}

@@ -1,6 +1,7 @@
 .wrapper {
+    position: relative;
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     gap: 20px;
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
@@ -23,18 +24,33 @@
 }
 
 .sidebar {
+    position: sticky;
+    top: 20px;
     grid-area: sidebar;
+    height: 100vh;
+    border-left: 1px solid #292929;
+    padding-left: 15px;
+    margin-bottom: 40px;
 }
 
+.btnGroup {
+    position: sticky;
+    top: 20px;
+}
 
 .main {
     grid-area: main;
-
+position: relative;
 }
 
 .sign_in_btn {
     background-color: #e3694a !important;
 }
+
+.navpills:hover {
+    background-color: rgba(33, 37, 41, 0.75) !important;
+}
+
 
 /* @media screen and (max-width:992px) {
     .navbar{
