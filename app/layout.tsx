@@ -5,7 +5,11 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Footer, Navbar, Sidebar } from '@/components';
-import styles from '../styles/styles.module.css'
+import styles from '../styles/styles.module.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+
 config.autoAddCss = false;
 const inter = Inter({
   subsets: ['latin']
@@ -23,10 +27,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
-      <body className={`${styles.wrapper} container mx-auto px-[80px] py-4 bg-body text-white`}>
-        <Navbar />
-        {children}
-        <Sidebar />
+      <body>
+        <div className={`${styles.wrapper} px-[80px] py-4 bg-body text-white`}>
+          <Navbar />
+          {children}
+          <Sidebar />
+        </div>
         <Footer />
       </body>
     </html>

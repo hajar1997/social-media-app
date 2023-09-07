@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Button } from 'flowbite-react';
 import styles from '../styles/styles.module.css';
+import { Feed, People, Trending } from '@/components';
 
 
 
@@ -54,9 +55,9 @@ export default function Home() {
         </Button.Group>
       </div>
       <div className='button-tabs_wrapper'>
-        {feedOpen && <div>tab1</div>}
-        {peopleOpen && <div>tab2</div>}
-        {trendingOpen && <div>tab3</div>}
+        {feedOpen && <Feed />}
+        {peopleOpen && <People />}
+        {trendingOpen && <Trending />}
       </div>
     </div>
   );

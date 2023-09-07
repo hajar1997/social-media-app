@@ -33,6 +33,7 @@
     margin-bottom: 40px;
 }
 
+
 .btnGroup {
     position: sticky;
     top: 20px;
@@ -40,7 +41,7 @@
 
 .main {
     grid-area: main;
-position: relative;
+    position: relative;
 }
 
 .sign_in_btn {
