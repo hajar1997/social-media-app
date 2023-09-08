@@ -3,14 +3,17 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Slider from "react-slick";
 import Link from "next/link";
+import { users } from "@/constants";
+import Image from "next/image";
+import styles from '../../styles/styles.module.css'
 
 
 const FollowPeopleSlide = () => {
 
     const settings = {
         dots: false,
-        arrows:false,
-        infinite: false,
+        arrows: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
@@ -28,22 +31,15 @@ const FollowPeopleSlide = () => {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    initialSlide: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    initialSlide: 1
                 }
             }
         ]
     };
     return (
-        <div className='py-6 p-2'>
+        <div className={`${styles.followPeople} py-6 p-2`}>
             <div className='flex justify-between items-center'>
                 <h4 className="font-bold">Follow People</h4>
                 <Link href="#">
@@ -51,30 +47,18 @@ const FollowPeopleSlide = () => {
                 </Link>
             </div>
             <Slider {...settings}>
-                <div>
-                    <h3>1</h3>
-                </div>
-                <div>
-                    <h3>2</h3>
-                </div>
-                <div>
-                    <h3>3</h3>
-                </div>
-                <div>
-                    <h3>4</h3>
-                </div>
-                <div>
-                    <h3>5</h3>
-                </div>
-                <div>
-                    <h3>6</h3>
-                </div>
-                <div>
-                    <h3>7</h3>
-                </div>
-                <div>
-                    <h3>8</h3>
-                </div>
+                {users.map((user) => (
+                    <div key={user.first_name} className={`${styles.slickSlider} bg-footer py-5  rounded-2xl  mt-3`}>
+                        <Image src={user.avatar} width={60} height={60} alt="user" className="rounded-full" />
+                        <div className="text-center">
+                            <p className="font-bold text-sm">{user.first_name} {user.last_name}</p>
+                            <p className="text-xs text-gray-400">{user.job}</p>
+                        </div>
+                        <div className="w-100 mt-2">
+                            <button className="w-100 px-4 py-1.5 border-orange-400 hover:bg-orange-500 border-[1px] border-solid text-xs rounded-full">+Follow</button>
+                        </div>
+                    </div>
+                ))}
             </Slider>
         </div>
     )

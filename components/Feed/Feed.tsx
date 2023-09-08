@@ -1,4 +1,4 @@
-import { FollowPeopleSlide, PostTweet } from ".."
+import { FollowPeopleSlide, PostTweet, Tweets } from ".."
 
 
 const Feed = () => {
@@ -6,6 +6,7 @@ const Feed = () => {
         <>
             <PostTweet />
             <FollowPeopleSlide />
+            <Tweets />
         </>
     )
 }

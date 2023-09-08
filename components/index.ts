@@ -6,5 +6,6 @@ import People from "./People/People";
 import Trending from "./Trending/Trending";
 import PostTweet from "./PostTweet/PostTweet";
 import FollowPeopleSlide from "./FollowPeopleSlide/FollowPeopleSlide";
+import Tweets from "./Tweets/Tweets";
 
-export { Navbar, Footer, Sidebar, Feed, People, Trending, PostTweet, FollowPeopleSlide };
+export { Navbar, Footer, Sidebar, Feed, People, Trending, PostTweet, FollowPeopleSlide, Tweets };
