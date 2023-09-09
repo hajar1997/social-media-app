@@ -39,7 +39,7 @@ const FollowPeopleSlide = () => {
         ]
     };
     return (
-        <div className={`${styles.followPeople} py-6 p-2`}>
+        <div className={`py-6 p-2`}>
             <div className='flex justify-between items-center'>
                 <h4 className="font-bold">Follow People</h4>
                 <Link href="#">
