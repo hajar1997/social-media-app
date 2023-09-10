@@ -1,11 +1,9 @@
 import Image from "next/image";
 import styles from '../../styles/styles.module.css'
 import { TweetProps } from "@/types";
-import { FunctionComponent, JSX, SVGProps } from "react";
+import { FunctionComponent } from "react";
 import Link from "next/link";
-import { Menu, Transition } from '@headlessui/react'
-import { Fragment } from 'react'
-import TweetDropdown from "../TweetDropdown/TweetDropdown";
+import { TweetDropdown, TweetImages } from "..";
 
 
 
@@ -17,8 +15,10 @@ const Tweets: FunctionComponent<TweetsProps> = ({ tweet }) => {
   return (
     <div className={`${styles.top_border}`}>
       <div className="mt-3 p-4 bg-footer w-full rounded-[1.3rem] flex gap-4">
-        <Image src={tweet.profile_image} width={60} height={50} alt="profile image" className="rounded-full" />
-        <div className="mt-1 w-full flex flex-col">
+        <div>
+          <Image src={tweet.profile_image} width={60} height={60} alt="profile image" className="rounded-full" />
+        </div>
+        <div className="w-full flex flex-col">
           <div className="flex  justify-between items-center">
             <div className="flex gap-2 items-center">
               <Link href="#">
@@ -35,8 +35,11 @@ const Tweets: FunctionComponent<TweetsProps> = ({ tweet }) => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-10 mt-2">
-            <p className="text-xs">{tweet.tweet}</p>
+          <div className="flex flex-col gap-5 mt-2">
+            <div>
+              <p className="text-xs">{tweet.tweet}</p>
+            </div>
+            <TweetImages tweet={tweet} />
           </div>
         </div>
       </div>
@@ -45,5 +48,6 @@ const Tweets: FunctionComponent<TweetsProps> = ({ tweet }) => {
 }
 
 export default Tweets;
+
 
 

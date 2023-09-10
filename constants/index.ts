@@ -51,7 +51,7 @@ export const tweets: TweetProps[] = [
     username: "@shay_jordon",
     date: dayAndMonth,
     profile_image: "/rmate2.jpg",
-    images: ["/post-img1.jpg", "/post-img2.jpg", "/post-img3.jpg"],
+    images: ["/post-img1.jpg", "/post-img2.jpg",],
     tweet: "Welcome to the Vogel family🙂",
     tweet_likes: 30.4,
     tweet_comments: 4.0,
