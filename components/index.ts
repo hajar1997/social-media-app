@@ -9,5 +9,6 @@ import FollowPeopleSlide from "./FollowPeopleSlide/FollowPeopleSlide";
 import Tweets from "./Tweets/Tweets";
 import TweetDropdown from "./TweetDropdown/TweetDropdown";
 import TweetImages from "./TweetImages/TweetImages";
+import TweetDetailModal from "./TweetDetailModal/TweetDetailModal";
 
-export { Navbar, Footer, Sidebar, Feed, People, Trending, PostTweet, FollowPeopleSlide, Tweets,TweetDropdown,TweetImages };
+export { Navbar, Footer, Sidebar, Feed, People, Trending, PostTweet, FollowPeopleSlide, Tweets,TweetDropdown,TweetImages,TweetDetailModal };

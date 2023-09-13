@@ -62,3 +62,8 @@
     display: flex!important;
     gap: 10px!important;
 }
+
+.rounded-r-none{
+    border-top-right-radius: 0px!important;
+    border-bottom-right-radius: 0px!important;
+}

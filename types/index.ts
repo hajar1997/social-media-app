@@ -4,6 +4,8 @@
 //   avatar: string;
 // }
 
+import { MouseEventHandler } from "react";
+
 export interface TweetProps {
   name: string;
   username: string;
@@ -16,4 +18,8 @@ export interface TweetProps {
   tweet_retweet: number;
 }
 
-
+export interface TweetDetailModalProps {
+  isOpen: boolean;
+  closeModal: () => void;
+  tweet: TweetProps;
+}
