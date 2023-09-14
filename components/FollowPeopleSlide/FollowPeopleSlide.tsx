@@ -39,7 +39,7 @@ const FollowPeopleSlide = () => {
         ]
     };
     return (
-        <div className={`py-6 p-2`}>
+        <div className={` py-6 p-2`}>
             <div className='flex justify-between items-center'>
                 <h4 className="font-bold">Follow People</h4>
                 <Link href="#">
@@ -48,7 +48,7 @@ const FollowPeopleSlide = () => {
             </div>
             <Slider {...settings}>
                 {users.map((user) => (
-                    <div key={user.first_name} className={`${styles.slickSlider} bg-footer py-5  rounded-2xl  mt-3`}>
+                    <div key={user.first_name} className={`${styles.slickSlider} ${styles.zero} bg-footer py-5  rounded-2xl  mt-3`}>
                         <Image src={user.avatar} width={60} height={60} alt="user" className="rounded-full" />
                         <div className="text-center">
                             <p className="font-bold text-sm">{user.first_name} {user.last_name}</p>

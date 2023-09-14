@@ -10,6 +10,8 @@ export interface TweetProps {
   name: string;
   username: string;
   date: string;
+  time: string;
+  year: number;
   profile_image: string;
   images: string[];
   tweet: string;
@@ -22,4 +24,12 @@ export interface TweetDetailModalProps {
   isOpen: boolean;
   closeModal: () => void;
   tweet: TweetProps;
+}
+
+export interface TweetRepliesProps {
+  name: string;
+  username: string;
+  date: string;
+  profile_image: string;
+  reply: string;
 }

@@ -64,6 +64,10 @@
     border-top: 0.3px solid #292929;
 }
 
+.bottom_border {
+    border-bottom: 0.3px solid #292929;
+}
+
 
 
 /* @media screen and (max-width:992px) {

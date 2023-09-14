@@ -1,4 +1,4 @@
-import { TweetProps } from "@/types";
+import { TweetDetailModalProps, TweetProps, TweetRepliesProps } from "@/types";
 
 export const users = [
   {
@@ -41,17 +41,22 @@ export const users = [
 
 const currentDate = new Date();
 const day = currentDate.getDate();
+const hour = currentDate.getHours();
+const minute = currentDate.getMinutes();
 const month = new Intl.DateTimeFormat("en-US", { month: "short" }).format(currentDate);
-
+const year = currentDate.getFullYear();
 const dayAndMonth = `${day} ${month}`;
+const exactTime = `${hour}:${minute}`;
 
 export const tweets: TweetProps[] = [
   {
     name: "Shay Jordan",
     username: "@shay_jordon",
     date: dayAndMonth,
+    time: exactTime,
+    year: year,
     profile_image: "/rmate2.jpg",
-    images: ["/post-img1.jpg", "/post-img2.jpg",],
+    images: ["/post-img1.jpg", "/post-img2.jpg"],
     tweet: "Welcome to the Vogel family🙂",
     tweet_likes: 30.4,
     tweet_comments: 4.0,
@@ -61,6 +66,8 @@ export const tweets: TweetProps[] = [
     name: "John Smith",
     username: "@john_smith",
     date: dayAndMonth,
+    time: exactTime,
+    year: year,
     profile_image: "/rmate1.jpg",
     images: ["/post2.png"],
     tweet:
@@ -71,21 +78,19 @@ export const tweets: TweetProps[] = [
   },
 ];
 
-export const tweet_replies = [
+export const tweet_replies: TweetRepliesProps[] = [
   {
     name: "Macie Bellis",
     username: "@macie_bellis",
     date: "19 Feb",
-    profile_image: "/rmate1.jpg",
-    tweet: "Hi,thanks for everything!",
+    profile_image: "/rmate2.jpg",
+    reply: "Hi,thanks for everything!",
   },
   {
     name: "John Smith",
     username: "@john_smith",
     date: "19 Feb",
     profile_image: "/rmate1.jpg",
-    tweet: "Wow,great office!",
+    reply: "Wow,great office!",
   },
 ];
-
-

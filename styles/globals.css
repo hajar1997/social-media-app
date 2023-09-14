@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 * {
-    min-height: 0;
     min-width: 0;
 }
 
@@ -59,11 +58,21 @@
 }
 
 .slick-track {
-    display: flex!important;
-    gap: 10px!important;
+    display: flex !important;
+    gap: 10px !important;
 }
 
-.rounded-r-none{
-    border-top-right-radius: 0px!important;
-    border-bottom-right-radius: 0px!important;
+.rounded-r-none {
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.custom_scrollbar::-webkit-scrollbar {
+    width: 4px;
+    scroll-behavior: smooth;
+}
+
+.custom_scrollbar::-webkit-scrollbar-thumb {
+    background-color: #99a2ab;
+    border-radius: 5px;
 }
