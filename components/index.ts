@@ -10,5 +10,6 @@ import Tweets from "./Tweets/Tweets";
 import TweetDropdown from "./TweetDropdown/TweetDropdown";
 import TweetImages from "./TweetImages/TweetImages";
 import TweetDetailModal from "./TweetDetailModal/TweetDetailModal";
+import PeopleList from "./PeopleList/PeopleList";
 
-export { Navbar, Footer, Sidebar, Feed, People, Trending, PostTweet, FollowPeopleSlide, Tweets,TweetDropdown,TweetImages,TweetDetailModal };
+export { Navbar, Footer, Sidebar, Feed, People, Trending, PostTweet, FollowPeopleSlide, Tweets,TweetDropdown,TweetImages,TweetDetailModal,PeopleList };
