@@ -19,7 +19,7 @@ const People = () => {
         <span className="font-bold text-white text-sm">News Papers & Channels</span>
         <PeopleList />
       </div>
-      <div className={`${styles.bottom_border} pb-4 flex flex-col gap-2`}>
+      <div className={` pb-4 flex flex-col gap-2`}>
         <span className="font-bold text-white text-sm">Politicians</span>
         <PeopleList />
       </div>

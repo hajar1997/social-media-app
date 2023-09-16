@@ -2,14 +2,23 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from '../../styles/styles.module.css'
 import { FunctionComponent } from "react";
-import { TweetProps } from "@/types";
+import { OptionsProps, TweetProps } from "@/types";
 import { TweetDropdown, TweetImages } from "..";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp, faComment } from "@fortawesome/free-regular-svg-icons";
-import { faRetweet, faShareNodes } from "@fortawesome/free-solid-svg-icons";
+import { faEdit, faRetweet, faShareNodes, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 
-
+const options: OptionsProps[] = [
+  {
+    label: 'Edit',
+    icon: faEdit,
+  },
+  {
+    label: 'Delete',
+    icon: faTrash,
+  },
+];
 
 interface TweetsProps {
   tweet: TweetProps;
@@ -36,7 +45,7 @@ const Tweets: FunctionComponent<TweetsProps> = ({ tweet }) => {
             <div className="flex gap-2 items-center">
               <span className="text-xs text-[#99a2ab]">{tweet.date}</span>
               <div>
-                <TweetDropdown />
+                <TweetDropdown options={options} />
               </div>
             </div>
           </div>

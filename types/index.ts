@@ -4,7 +4,7 @@
 //   avatar: string;
 // }
 
-import { MouseEventHandler } from "react";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 export interface TweetProps {
   name: string;
@@ -32,4 +32,9 @@ export interface TweetRepliesProps {
   date: string;
   profile_image: string;
   reply: string;
+}
+
+export interface OptionsProps {
+  label: any;
+  icon: IconDefinition;
 }

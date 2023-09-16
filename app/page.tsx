@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Button } from 'flowbite-react';
 import styles from '../styles/styles.module.css';
-import { Feed, People, Trending } from '@/components';
+import { Feed, People } from '@/components';
 
 
 
@@ -10,7 +10,6 @@ export default function Home() {
   const [activeButton, setActiveButton] = useState('FEED');
   const [feedOpen, setFeedOpen] = useState(true);
   const [peopleOpen, setPeopleOpen] = useState(false);
-  const [trendingOpen, setTrendingOpen] = useState(false);
 
   const handleButtonClick = (buttonText: string) => {
     setActiveButton(buttonText);
@@ -18,15 +17,12 @@ export default function Home() {
     if (buttonText === 'FEED') {
       setFeedOpen(true);
       setPeopleOpen(false);
-      setTrendingOpen(false);
     } else if (buttonText === 'PEOPLE') {
       setFeedOpen(false);
       setPeopleOpen(true);
-      setTrendingOpen(false);
     } else if (buttonText === 'TRENDING') {
       setFeedOpen(false);
       setPeopleOpen(false);
-      setTrendingOpen(true);
     }
   };
 
@@ -46,18 +42,11 @@ export default function Home() {
           >
             PEOPLE
           </Button>
-          <Button
-            className={`w-full p-2 rounded-r-[1.3rem] ${activeButton === 'TRENDING' ? 'active-button' : 'inactive-button'}`}
-            onClick={() => handleButtonClick('TRENDING')}
-          >
-            TRENDING
-          </Button>
         </Button.Group>
       </div>
       <div className='button-tabs_wrapper'>
         {feedOpen && <Feed />}
         {peopleOpen && <People />}
-        {trendingOpen && <Trending />}
       </div>
     </div>
   );

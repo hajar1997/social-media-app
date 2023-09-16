@@ -16,8 +16,8 @@
 .navbar {
     position: sticky;
     top: 20px;
-    height: 100vh;
     grid-area: navbar;
+    height: 100vh;
     border-right: 1px solid #292929;
     padding-right: 15px;
     margin-bottom: 40px;
@@ -27,7 +27,6 @@
     position: sticky;
     top: 20px;
     grid-area: sidebar;
-    height: 100vh;
     border-left: 1px solid #292929;
     padding-left: 15px;
     margin-bottom: 40px;
@@ -37,6 +36,7 @@
 .btnGroup {
     position: sticky;
     top: 20px;
+    z-index: 100;
 }
 
 .main {
@@ -68,6 +68,9 @@
     border-bottom: 0.3px solid #292929;
 }
 
+.textinput {
+    outline: none !important;
+}
 
 
 /* @media screen and (max-width:992px) {

@@ -100,3 +100,56 @@ export const tweet_replies: TweetRepliesProps[] = [
     reply: "Wow,great office!",
   },
 ];
+
+export const trends = [
+  {
+    topic: "Trending",
+    name: "#SingaporeGP",
+    tweet_volume: 25,
+  },
+  {
+    topic: "Soccer",
+    name: "Liverpool",
+    tweet_volume: 18.6,
+  },
+  {
+    topic: "Games",
+    name: "Gameday",
+    tweet_volume: 22,
+  },
+  {
+    topic: "Trending",
+    name: "#TechNews",
+    tweet_volume: 16.7,
+  },
+  {
+    topic: "Travel",
+    name: "#TravelTuesday",
+    tweet_volume: 21,
+  },
+  {
+    topic: "Animals",
+    name: "#Caturday",
+    tweet_volume: 27.5,
+  },
+  {
+    topic: "Trending",
+    name: "#MovieNight",
+    tweet_volume: 23,
+  },
+  {
+    topic: "Trending",
+    name: "#FoodieChat",
+    tweet_volume: 19,
+  },
+  {
+    topic: "Sport",
+    name: "#FitnessGoals",
+    tweet_volume: 20,
+  },
+  {
+    topic: "Entertainment",
+    name: "#BatmanDay",
+    tweet_volume: 15.3,
+  },
+];
