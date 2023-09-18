@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body>
-        <div className={`${styles.wrapper} px-[80px] py-4 bg-body text-white`}>
+        <div className={`${styles.wrapper} lg:px-[80px] lg:py-4 bg-body text-white`}>
           <Navbar />
           {children}
           <Sidebar />

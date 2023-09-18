@@ -1,4 +1,4 @@
-import { tweets, tweet_replies } from "@/constants";
+import { tweets } from "@/constants";
 import { FollowPeopleSlide, PostTweet, Tweets } from ".."
 
 const Feed = () => {

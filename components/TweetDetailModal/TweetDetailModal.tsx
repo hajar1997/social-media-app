@@ -20,7 +20,7 @@ const TweetDetailModal = ({ isOpen, closeModal, tweet }: TweetDetailModalProps) 
 
         <>
             <Transition appear show={isOpen} as={Fragment}>
-                <Dialog as='div' className="relative z-10" onClose={closeModal}>
+                <Dialog as='div' className="relative z-[1000]" onClose={closeModal}>
                     <Transition.Child
                         as={Fragment}
                         enter='ease-out duration-300'
@@ -41,9 +41,9 @@ const TweetDetailModal = ({ isOpen, closeModal, tweet }: TweetDetailModalProps) 
                                 leave='ease-in duration-200'
                                 leaveFrom='opacity-100 scale-100'
                                 leaveTo='opacity-0 scale-95'>
-                                <Dialog.Panel className="relative w-full max-w-[815px]  transform rounded-2xl bg-black text-white shadow-xl transition-all flex flex-col gap-5">
-                                    <div className='flex'>
-                                        <div className='w-7/12 h-[600px]'>
+                                <Dialog.Panel className="relative w-full max-w-[815px]  transform lg:rounded-2xl bg-black text-white shadow-xl transition-all flex flex-col gap-5">
+                                    <div className='flex lg:flex-row flex-col'>
+                                        <div className='lg:w-7/12 lg:h-[600px] h-[350px] w-100'>
                                             <Carousel indicators={tweet.images.length === 1 ? false : true} leftControl={controlValue} rightControl={controlValue} className='[&>*:first-child]:rounded-r-none' >
                                                 {
                                                     tweet.images.map((image) => (
@@ -52,7 +52,7 @@ const TweetDetailModal = ({ isOpen, closeModal, tweet }: TweetDetailModalProps) 
                                                 }
                                             </Carousel>
                                         </div>
-                                        <div className='w-5/12 h-[600px] flex flex-col'>
+                                        <div className='lg:w-5/12 lg:h-[600px] h-[450px] w-100 flex flex-col'>
                                             <div className={`flex flex-col ${styles.bottom_border}`}>
                                                 <div className={`p-3 flex justify-between items-center `}>
                                                     <div className='flex gap-3'>

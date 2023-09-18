@@ -27,7 +27,7 @@ export default function Home() {
   };
 
   return (
-    <div className={`${styles.main} py-4 mt-4`}>
+    <div className={`${styles.main} lg:py-4 lg:mt-4 px-[25px]`}>
       <div className={`${styles.btnGroup} button-group_wrapper mb-4`}>
         <Button.Group className='w-[100%]'>
           <Button

@@ -38,3 +38,8 @@ export interface OptionsProps {
   label: any;
   icon: IconDefinition;
 }
+
+export interface MobileNavbarProps {
+  isOpen: boolean;
+  closeModal: () => void;
+}

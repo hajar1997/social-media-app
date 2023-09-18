@@ -13,5 +13,7 @@ import PeopleList from "./PeopleList/PeopleList";
 import SearchBar from "./SearchBar/SearchBar";
 import Trends from "./Trends/Trends";
 import WhoToFollow from "./WhoToFollow/WhoToFollow";
+import MobileNavbar from "./MobileNavbar/MobileNavbar";
+import Header from "./Header/Header";
 
-export { Navbar, Footer, Sidebar, Feed, People, PostTweet, FollowPeopleSlide, Tweets, TweetDropdown, TweetImages, TweetDetailModal, PeopleList,SearchBar,Trends,WhoToFollow };
+export { Navbar, Footer, Sidebar, Feed, People, PostTweet, FollowPeopleSlide, Tweets, TweetDropdown, TweetImages, TweetDetailModal, PeopleList,SearchBar,Trends,WhoToFollow,MobileNavbar,Header };
