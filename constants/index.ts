@@ -1,4 +1,4 @@
-import { TweetDetailModalProps, TweetProps, TweetRepliesProps } from "@/types";
+import { TweetProps, TweetRepliesProps } from "@/types";
 
 export const users = [
   {

@@ -1,5 +1,10 @@
 import { tweets } from "@/constants";
-import { FollowPeopleSlide, PostTweet, Tweets } from ".."
+import dynamic from "next/dynamic";
+
+const FollowPeopleSlide = dynamic(() => import('@/components/FollowPeopleSlide/FollowPeopleSlide'));
+const PostTweet = dynamic(() => import('@/components/PostTweet/PostTweet'));
+const Tweets = dynamic(() => import('@/components/Tweets/Tweets'));
+
 
 const Feed = () => {
     return (

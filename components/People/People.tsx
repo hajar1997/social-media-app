@@ -1,8 +1,7 @@
-import Image from "next/image";
-import { PeopleList } from "..";
 import styles from '../../styles/styles.module.css';
+import dynamic from "next/dynamic";
 
-
+const PeopleList = dynamic(() => import("@/components/PeopleList/PeopleList"));
 
 const People = () => {
   return (

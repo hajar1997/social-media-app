@@ -1,47 +1,58 @@
 .wrapper {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 20px;
+    grid-template-columns: 251px 642px 308px;
+
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
         "navbar main sidebar"
-        "navbar main sidebar"
-        "footer footer footer";
+        "navbar main sidebar";
     min-height: 100vh;
     align-items: start;
+    justify-content: center;
 }
 
 
 .navbar {
+    grid-area: navbar;
+    position: relative;
+    border-right: 1px solid #292929;
+    height: 100%;
+}
+
+.fixedNavbar {
     position: sticky;
     top: 20px;
-    grid-area: navbar;
-    height: 100vh;
-    border-right: 1px solid #292929;
     padding-right: 15px;
-    margin-bottom: 40px;
 }
 
 .sidebar {
-    position: sticky;
-    top: 20px;
     grid-area: sidebar;
-    border-left: 1px solid #292929;
+    position: relative;
     padding-left: 15px;
-    margin-bottom: 40px;
+    height: 100%;
+    border-left: 1px solid #292929;
+
 }
 
+.fixedSidebar {
+    position: sticky;
+    top: 20px;
+    padding-left: 15px;
+}
+
+
+.main {
+    grid-area: main;
+    position: relative;
+    border-right: 1px solid #292929;
+    border-left: 1px solid #292929;
+}
 
 .btnGroup {
     position: sticky;
     top: 20px;
     z-index: 100;
-}
-
-.main {
-    grid-area: main;
-    position: relative;
 }
 
 .sign_in_btn {

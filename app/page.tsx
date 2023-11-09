@@ -2,9 +2,10 @@
 import { useState } from 'react';
 import { Button } from 'flowbite-react';
 import styles from '../styles/styles.module.css';
-import { Feed, People } from '@/components';
+import dynamic from 'next/dynamic';
 
-
+const Feed = dynamic(() => import('@/components/Feed/Feed'));
+const People = dynamic(() => import('@/components/People/People'))
 
 export default function Home() {
   const [activeButton, setActiveButton] = useState('FEED');
@@ -27,7 +28,7 @@ export default function Home() {
   };
 
   return (
-    <div className={`${styles.main} lg:py-4 lg:mt-4 px-[25px]`}>
+    <main className={`lg:py-4 lg:mt-4 lg:px-[25px] px-[10px]`}>
       <div className={`${styles.btnGroup} button-group_wrapper mb-4`}>
         <Button.Group className='w-[100%]'>
           <Button
@@ -48,6 +49,6 @@ export default function Home() {
         {feedOpen && <Feed />}
         {peopleOpen && <People />}
       </div>
-    </div>
+    </main>
   );
 }

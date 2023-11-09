@@ -3,11 +3,13 @@ import Link from "next/link";
 import styles from '../../styles/styles.module.css'
 import { FunctionComponent } from "react";
 import { OptionsProps, TweetProps } from "@/types";
-import { TweetDropdown, TweetImages } from "..";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp, faComment } from "@fortawesome/free-regular-svg-icons";
 import { faEdit, faRetweet, faShareNodes, faTrash } from "@fortawesome/free-solid-svg-icons";
+import dynamic from "next/dynamic";
 
+const TweetDropdown = dynamic(() => import("@/components/TweetDropdown/TweetDropdown"));
+const TweetImages = dynamic(() => import("@/components/TweetImages/TweetImages"));
 
 const options: OptionsProps[] = [
   {
@@ -28,9 +30,9 @@ const Tweets: FunctionComponent<TweetsProps> = ({ tweet }) => {
 
   return (
     <div className={`${styles.top_border}`}>
-      <div className="mt-3 p-5 bg-footer w-full rounded-[1.3rem] flex gap-4">
+      <div className="mt-3 lg:p-5 p-4 bg-footer w-full rounded-[1.3rem] flex gap-4">
         <div>
-          <Image src={tweet.profile_image} width={60} height={60} alt="profile image" className="rounded-full" />
+          <Image src={tweet.profile_image} aria-hidden={true} width={60} height={50} priority alt="profile image" className="rounded-full" />
         </div>
         <div className="w-full flex flex-col">
           <div className="flex  justify-between items-center">

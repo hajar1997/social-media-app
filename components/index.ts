@@ -1,4 +1,3 @@
-import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
 import Sidebar from "./Sidebar/Sidebar";
 import Feed from "./Feed/Feed";
@@ -14,6 +13,37 @@ import SearchBar from "./SearchBar/SearchBar";
 import Trends from "./Trends/Trends";
 import WhoToFollow from "./WhoToFollow/WhoToFollow";
 import MobileNavbar from "./MobileNavbar/MobileNavbar";
+import Navbar from "./Navbar/Navbar";
 import Header from "./Header/Header";
+import ProfileHeader from "./ProfileHeader/ProfileHeader";
+import ProfileTabs from "./ProfileTabs/ProfileTabs";
+import Posts from "./Posts/Posts";
+import ProfileMedia from "./ProfileMedia/ProfileMedia";
+import ProfileLikes from "./ProfileLikes/ProfileLikes";
+import Replies from "./Replies/Replies";
 
-export { Navbar, Footer, Sidebar, Feed, People, PostTweet, FollowPeopleSlide, Tweets, TweetDropdown, TweetImages, TweetDetailModal, PeopleList,SearchBar,Trends,WhoToFollow,MobileNavbar,Header };
+export {
+  Navbar,
+  Footer,
+  Sidebar,
+  Feed,
+  People,
+  PostTweet,
+  FollowPeopleSlide,
+  Tweets,
+  TweetDropdown,
+  TweetImages,
+  TweetDetailModal,
+  PeopleList,
+  SearchBar,
+  Trends,
+  WhoToFollow,
+  MobileNavbar,
+  Header,
+  ProfileHeader,
+  ProfileTabs,
+  Posts,
+  ProfileMedia,
+  ProfileLikes,
+  Replies,
+};

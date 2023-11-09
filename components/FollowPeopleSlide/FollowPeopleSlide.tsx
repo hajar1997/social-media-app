@@ -57,7 +57,7 @@ const FollowPeopleSlide = () => {
             <Slider {...settings}>
                 {users.map((user) => (
                     <div key={user.first_name} className={`${styles.slickSlider} ${styles.zero} bg-footer py-5  rounded-2xl  mt-3`}>
-                        <Image src={user.avatar} width={60} height={60} alt="user" className="rounded-full" />
+                        <Image src={user.avatar} width={60} height={60}  alt="user" className="rounded-full" />
                         <div className="text-center">
                             <p className="font-bold text-sm">{user.first_name} {user.last_name}</p>
                             <p className="text-xs text-gray-400">{user.job}</p>

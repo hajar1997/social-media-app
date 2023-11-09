@@ -18,6 +18,11 @@
     transition: .2s ease-in-out;
 }
 
+.active-link {
+    background-color: #1b1b1b;
+    color: #ececec !important;
+}
+
 .nav-wrapper li a:hover {
     background-color: #1b1b1b;
     color: #ececec;
@@ -75,4 +80,21 @@
 .custom_scrollbar::-webkit-scrollbar-thumb {
     background-color: #99a2ab;
     border-radius: 5px;
+}
+
+.ant-avatar {
+    width: 24px!important;
+    height: 24px!important;
+}
+
+.ant-avatar-icon{
+    font-size: 13px!important;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.ant-divider{
+    border-block-start:1px solid #292929!important;
 }

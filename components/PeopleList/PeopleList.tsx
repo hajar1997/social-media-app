@@ -9,7 +9,11 @@ const PeopleList = () => {
             {users.slice(0, 3).map((user, index) => (
                 <div key={index} className={`flex justify-between items-center bg-footer py-5 px-4 ${index === 0 ? 'rounded-b-none' : index === 1 ? "rounded-t-none rounded-b-none" : 'rounded-t-none'} rounded-2xl ${index === 2 ? "" : styles.bottom_border} `}>
                     <div className="flex gap-3">
-                        <Image src={user.avatar} width={60} height={60} alt="user" className="rounded-full" />
+                        <Image src={user.avatar} width={60} height={60} alt="user" style={{
+                            width: "60px",
+                            height: "60px"
+                        }}
+                            className="rounded-full" />
                         <div>
                             <p className="font-bold text-sm">{user.first_name} {user.last_name}</p>
                             <p className="text-xs  text-gray-400">{user.username}</p>

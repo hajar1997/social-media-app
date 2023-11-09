@@ -1,9 +1,11 @@
 import { trends } from '@/constants'
 import styles from '../../styles/styles.module.css'
 import Link from 'next/link'
-import { TweetDropdown } from '..'
-import { faFaceFrown, faSadCry, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faFaceFrown } from '@fortawesome/free-solid-svg-icons';
 import { OptionsProps } from '@/types';
+import dynamic from 'next/dynamic';
+
+const TweetDropdown = dynamic(() => import("@/components/TweetDropdown/TweetDropdown"));
 
 const options: OptionsProps[] = [
     {
@@ -20,11 +22,11 @@ const Trends = () => {
     return (
         <div className="rounded-xl bg-footer">
             <div className={`${styles.bottom_border} p-3.5`}>
-                <span className={`text-[#ececec] text-sm font-bold`}>What's happening</span>
+                <span className="text-[#ececec] text-sm font-bold">What's happening</span>
             </div>
             {trends.slice(0, 5).map((trend, index) => (
-                <Link href="#">
-                    <div key={index} className={`flex justify-between items-center px-3.5 py-3.5 ${index === 4 ? "" : styles.bottom_border}`}>
+                <Link href="#" key={index}>
+                    <div  className={`flex justify-between items-center px-3.5 py-3.5 ${index === 4 ? "" : styles.bottom_border}`}>
                         <div className='flex flex-col gap-[2px]'>
                             <span className='text-[#99a2ab] text-xs'>{trend.topic}</span>
                             <span className='text-[#ececec] text-sm font-bold'>{trend.name}</span>
