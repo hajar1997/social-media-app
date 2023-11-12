@@ -1,5 +1,6 @@
 import { tweets } from "@/constants";
 import dynamic from "next/dynamic";
+import { Divider } from "antd";
 
 const FollowPeopleSlide = dynamic(() => import('@/components/FollowPeopleSlide/FollowPeopleSlide'));
 const PostTweet = dynamic(() => import('@/components/PostTweet/PostTweet'));
@@ -11,7 +12,8 @@ const Feed = () => {
         <>
             <PostTweet />
             <FollowPeopleSlide />
-            <div className="mt-3 flex flex-col gap-5">
+            <Divider />
+            <div className="mt-3 mb-3 flex flex-col gap-5">
                 {tweets.map((tweet) => (
                     <Tweets key={tweet.username} tweet={tweet} />
                 ))}

@@ -16,7 +16,7 @@ const TweetImages: FunctionComponent<TweetsProps> = ({ tweet }) => {
 
     return (
         <div>
-            {tweet.images.length === 4 ? (
+            {tweet?.images?.length === 4 ? (
                 <div className="flex gap-[2px] w-full cursor-pointer" onClick={() => setIsOpen(true)}>
                     <div className="w-full flex gap-[2px] flex-col" >
                         <Image src={tweet.images[0]} alt="tweet images" width={255} height={145} priority className="h-[143px] w-full  rounded-ss-md object-cover" />
@@ -27,7 +27,7 @@ const TweetImages: FunctionComponent<TweetsProps> = ({ tweet }) => {
                         <Image src={tweet.images[3]} alt="tweet images" width={255} height={145} priority className="h-[143px] w-full rounded-br-md object-cover" />
                     </div>
                 </div>
-            ) : tweet.images.length === 3 ? (
+            ) : tweet?.images?.length === 3 ? (
                 <div className="flex gap-[2px] w-full cursor-pointer" onClick={() => setIsOpen(true)}>
                     <div className="w-full">
                         <Image src={tweet.images[0]} alt="tweet images" width={255} height={288} priority className="h-[288px] w-full object-cover rounded-l-md" />
@@ -37,16 +37,16 @@ const TweetImages: FunctionComponent<TweetsProps> = ({ tweet }) => {
                         <Image src={tweet.images[2]} alt="tweet images" width={255} height={145} priority className="h-[143px] w-full rounded-br-md object-cover" />
                     </div>
                 </div>
-            ) : tweet.images.length === 2 ? (
+            ) : tweet?.images?.length === 2 ? (
                 <div className="w-full flex gap-[2px] cursor-pointer" onClick={() => setIsOpen(true)}>
                     <Image src={tweet.images[0]} alt="tweet images" width={514} height={288} priority className="h-[288px] w-full object-cover  rounded-l-md" />
                     <Image src={tweet.images[1]} alt="tweet images" width={514} height={288} priority className="h-[288px] w-full object-cover rounded-r-md" />
                 </div>
-            ) : (
+            ) : tweet?.images?.length ? (
                 <div className="w-full cursor-pointer" onClick={() => setIsOpen(true)}>
                     <Image src={tweet.images[0]} alt="tweet images" width={514} height={288} priority className="h-[288px] w-full   rounded-l-md" />
                 </div>
-            )}
+            ) : ""}
             <TweetDetailModal isOpen={isOpen} tweet={tweet} closeModal={() => setIsOpen(false)} />
         </div>
     )

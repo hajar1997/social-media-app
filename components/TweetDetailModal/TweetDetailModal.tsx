@@ -13,7 +13,7 @@ import { tweet_replies } from '@/constants';
 
 
 const TweetDetailModal = ({ isOpen, closeModal, tweet }: TweetDetailModalProps) => {
-    const controlValue = tweet?.images.length > 1
+    const controlValue = tweet.images && tweet?.images?.length > 1
         ? ""
         : " "
     return (
@@ -44,10 +44,10 @@ const TweetDetailModal = ({ isOpen, closeModal, tweet }: TweetDetailModalProps) 
                                 <Dialog.Panel className="relative w-full max-w-[815px]  transform lg:rounded-2xl bg-black text-white shadow-xl transition-all flex flex-col gap-5">
                                     <div className='flex lg:flex-row flex-col p-5 lg:p-0'>
                                         <div className='lg:w-7/12 lg:h-[600px] h-[350px] w-100 lg:static relative'>
-                                            <Carousel indicators={tweet.images.length === 1 ? false : true} leftControl={controlValue} rightControl={controlValue} className='lg:[&>*:first-child]:rounded-r-none [&>*:first-child]:rounded-none' >
+                                            <Carousel indicators={tweet.images?.length === 1 ? false : true} leftControl={controlValue} rightControl={controlValue} className='lg:[&>*:first-child]:rounded-r-none [&>*:first-child]:rounded-none' >
                                                 {
-                                                    tweet.images.map((image, index) => (
-                                                        <Image src={image} width={475} height={600} alt='carousel images' priority key={index}  />
+                                                    tweet.images?.map((image, index) => (
+                                                        <Image src={image} width={475} height={600} alt='carousel images' priority key={index} />
                                                     ))
                                                 }
                                             </Carousel>
@@ -84,15 +84,15 @@ const TweetDetailModal = ({ isOpen, closeModal, tweet }: TweetDetailModalProps) 
                                             <div className={` ${styles.bottom_border} p-3 flex  justify-between`}>
                                                 <div className="flex items-center gap-2 cursor-pointer">
                                                     <FontAwesomeIcon icon={faThumbsUp} className="text-[17px] text-[#99a2ab]" />
-                                                    <span className="text-[#99a2ab] text-xs">30.4K</span>
+                                                    <span className="text-[#99a2ab] text-xs">{tweet.tweet_likes}</span>
                                                 </div>
                                                 <div className="flex items-center gap-2 cursor-pointer">
                                                     <FontAwesomeIcon icon={faComment} className="text-[17px] text-[#99a2ab]" />
-                                                    <span className="text-[#99a2ab] text-xs">4.0K</span>
+                                                    <span className="text-[#99a2ab] text-xs">{tweet.tweet_comments}</span>
                                                 </div>
                                                 <div className="flex items-center gap-2 cursor-pointer">
                                                     <FontAwesomeIcon icon={faRetweet} className="text-[17px] text-[#99a2ab]" />
-                                                    <span className="text-[#99a2ab] text-xs">617</span>
+                                                    <span className="text-[#99a2ab] text-xs">{tweet.tweet_retweet}</span>
                                                 </div>
                                                 <div className="flex items-center gap-2 cursor-pointer">
                                                     <FontAwesomeIcon icon={faShareNodes} className="text-[17px] text-[#99a2ab]" />
@@ -135,10 +135,10 @@ const TweetDetailModal = ({ isOpen, closeModal, tweet }: TweetDetailModalProps) 
                                                 </div>
                                             </div>
                                             <div className="px-[1.26rem]  py-3 flex flex-col gap-4 overflow-y-auto custom_scrollbar ">
-                                                {tweet_replies.map((replies, index) => (
+                                                {tweet_replies?.map((replies, index) => (
                                                     <div className="flex mb-2 gap-2" key={index}>
                                                         <div>
-                                                            <Image src={replies.profile_image} width={36} height={36}  alt='profile img' className='rounded-full' />
+                                                            <Image src={replies.profile_image} width={36} height={36} alt='profile img' className='rounded-full' />
                                                         </div>
                                                         <div className='flex w-full flex-col'>
                                                             <div className='flex flex-col bg-body px-3 gap-1 py-3 text-left rounded-xl w-full'>

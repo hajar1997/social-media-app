@@ -28,8 +28,8 @@ export default function Home() {
   };
 
   return (
-    <main className={`lg:py-4 lg:mt-4 lg:px-[25px] px-[10px]`}>
-      <div className={`${styles.btnGroup} button-group_wrapper mb-4`}>
+    <main className={`lg:py-4 lg:mt-4`}>
+      <div className={`${styles.btnGroup} button-group_wrapper mb-4 px-5`}>
         <Button.Group className='w-[100%]'>
           <Button
             className={`w-full p-2 rounded-l-[1.3rem] ${activeButton === 'FEED' ? 'active-button' : 'inactive-button'}`}
@@ -45,7 +45,7 @@ export default function Home() {
           </Button>
         </Button.Group>
       </div>
-      <div className='button-tabs_wrapper'>
+      <div className='button-tabs_wrapper px-5'>
         {feedOpen && <Feed />}
         {peopleOpen && <People />}
       </div>

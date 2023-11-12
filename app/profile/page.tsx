@@ -7,7 +7,7 @@ import React from 'react'
 
 const Profile = () => {
     return (
-        <div className='mt-4 '>
+        <div className='mt-4'>
             <div className=' flex justify-between items-center px-5 py-5'>
                 <div className='flex gap-8'>
                     <Link href="/">

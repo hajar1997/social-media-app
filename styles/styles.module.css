@@ -2,7 +2,6 @@
     position: relative;
     display: grid;
     grid-template-columns: 251px 642px 308px;
-
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
         "navbar main sidebar"

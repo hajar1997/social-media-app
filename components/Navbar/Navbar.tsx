@@ -6,9 +6,11 @@ import Image from 'next/image';
 import styles from '../../styles/styles.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faCircleUser, faCompass, faRightFromBracket, faWindowRestore, faGlobe, faSortDown } from '@fortawesome/free-solid-svg-icons';
+import LanguageModal from '../LanguageModal/LanguageModal';
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
     const pathName = usePathname();
     return (
         <aside className={`${styles.navbar} py-4 mt-4`}>
@@ -47,7 +49,7 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/language" className={`py-[12px] px-[16px] mb-[9px]`}>
+                        <Link href="" className={`py-[12px] px-[16px] mb-[9px]`} onClick={() => setIsOpen(true)} >
                             <FontAwesomeIcon className='me-3 text-xl' icon={faGlobe} />
                             <span>Language</span>
                         </Link>
@@ -91,6 +93,7 @@ const Navbar = () => {
                     <button type='button' className={`${styles.sign_in_btn} rounded-xl font-semibold text-base py-3 px-4 w-full`}>Sign In</button>
                 </div>
             </nav>
+            <LanguageModal isOpen={isOpen} closeModal={() => setIsOpen(false)} />
         </aside>
     )
 }

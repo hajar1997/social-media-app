@@ -13,11 +13,11 @@ export interface TweetProps {
   time: string;
   year: number;
   profile_image: string;
-  images: string[];
+  images?: string[];
   tweet: string;
-  tweet_likes: number;
-  tweet_comments: number;
-  tweet_retweet: number;
+  tweet_likes?: number;
+  tweet_comments?: number;
+  tweet_retweet?: number;
 }
 
 export interface TweetDetailModalProps {
@@ -31,7 +31,11 @@ export interface TweetRepliesProps {
   username: string;
   date: string;
   profile_image: string;
+  images?: string[];
   reply: string;
+  reply_likes?: number;
+  reply_comments?: number;
+  reply_retweet?: number;
 }
 
 export interface OptionsProps {
