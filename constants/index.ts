@@ -204,3 +204,18 @@ export const trends = [
     tweet_volume: 15.3,
   },
 ];
+
+export const languages = [
+  {
+    id: 0,
+    language: "English",
+  },
+  {
+    id: 1,
+    language: "Türkçe",
+  },
+  {
+    id: 2,
+    language: "Azərbaycanca",
+  },
+];

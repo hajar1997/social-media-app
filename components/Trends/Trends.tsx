@@ -3,9 +3,8 @@ import styles from '../../styles/styles.module.css'
 import Link from 'next/link'
 import { faFaceFrown } from '@fortawesome/free-solid-svg-icons';
 import { OptionsProps } from '@/types';
-import dynamic from 'next/dynamic';
+import { TweetDropdown } from '..';
 
-const TweetDropdown = dynamic(() => import("@/components/TweetDropdown/TweetDropdown"));
 
 const options: OptionsProps[] = [
     {

@@ -1,4 +1,3 @@
-import { HiSearch } from 'react-icons/hi';
 
 const SearchBar = () => {
     return (

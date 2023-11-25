@@ -1,8 +1,7 @@
 'use client'
 import React from 'react'
 import { users } from '@/constants';
-import { AntDesignOutlined, UserOutlined } from '@ant-design/icons';
-import { Avatar, Tooltip } from 'antd';
+import { Avatar } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Image from 'next/image'
 import img from '../../public/rmate2.jpg'
@@ -54,16 +53,16 @@ const ProfileHeader = () => {
           <div className='flex flex-col gap-1'>
             <p className='text-[13px]'>391k <span className='text-[#99a2ab]'>Followers</span></p>
             <Avatar.Group>
-              {users.slice(0, 5).map((user) => (
-                <Avatar src={user.avatar} />
+              {users.slice(0, 5).map((user, index) => (
+                <Avatar key={index} src={user.avatar} />
               ))}
             </Avatar.Group>
           </div>
           <div className='flex flex-col gap-1'>
             <p className='text-[13px]'>3  <span className='text-[#99a2ab]'>Following</span></p>
             <Avatar.Group>
-              {users.slice(0, 3).map((user) => (
-                <Avatar src={user.avatar} />
+              {users.slice(0, 3).map((user, index) => (
+                <Avatar src={user.avatar} key={index} />
               ))}
             </Avatar.Group>
           </div>

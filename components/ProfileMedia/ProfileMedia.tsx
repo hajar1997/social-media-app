@@ -4,12 +4,11 @@ import { Tweets } from '..';
 
 const ProfileMedia = () => {
   const tweetWithImages = tweets.filter((tweet) => tweet.images ? tweet : "");
-  console.log(tweetWithImages);
 
   return (
     <div className='px-5'>
-      {tweetWithImages.slice(0,2).map((tweets) => (
-        <Tweets key={tweets.username} tweet={tweets} />
+      {tweetWithImages.slice(0, 2).map((tweets,index) => (
+        <Tweets key={index} tweet={tweets} />
       ))}
     </div>
   )

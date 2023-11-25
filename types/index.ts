@@ -32,7 +32,7 @@ export interface TweetRepliesProps {
   date: string;
   profile_image: string;
   images?: string[];
-  reply: string;
+  reply?: string;
   reply_likes?: number;
   reply_comments?: number;
   reply_retweet?: number;

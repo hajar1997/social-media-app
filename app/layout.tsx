@@ -8,7 +8,7 @@ import { Footer, Header, Sidebar } from '@/components';
 import styles from '../styles/styles.module.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Providers } from '@/redux/provider';
+// import { Providers } from '@/redux/provider';
 
 
 config.autoAddCss = false;
@@ -31,9 +31,9 @@ export default function RootLayout({
       <body>
         <div className={`${styles.wrapper} lg:px-[80px] lg:py-4 bg-body text-white`}>
           <Header />
-          <Providers>
-            {children}
-          </Providers>
+          {/* <Providers> */}
+          {children}
+          {/* </Providers> */}
           <Sidebar />
         </div>
         <Footer />

@@ -1,9 +1,6 @@
-import dynamic from 'next/dynamic';
+import { SearchBar, Trends, WhoToFollow } from '..'
 import styles from '../../styles/styles.module.css'
 
-const SearchBar = dynamic(() => import("@/components/SearchBar/SearchBar"));
-const Trends = dynamic(() => import("@/components/Trends/Trends"));
-const WhoToFollow = dynamic(() => import("@/components/WhoToFollow/WhoToFollow"));
 
 const Sidebar = () => {
     return (

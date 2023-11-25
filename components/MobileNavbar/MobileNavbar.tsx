@@ -1,20 +1,23 @@
 'use client';
-import "../../node_modules/preline/dist/preline";
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../../styles/styles.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faCircleUser, faCompass, faRightFromBracket, faWindowRestore, faGlobe, faSortDown } from '@fortawesome/free-solid-svg-icons';
+import LanguageModal from '../LanguageModal/LanguageModal';
 
 export default function MobileNavbar() {
     const [open, setOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
     const pathName = usePathname();
 
-    const closeSidebar = () => {
-        setOpen(false);
-    };
+
+    useEffect(() => {
+        require('preline');
+    }, []);
+
     return (
         <div>
             <button type="button" className="bg-[#e76f51] py-[5px] px-[10px] mr-[13px] rounded" data-hs-overlay="#docs-sidebar" aria-controls="docs-sidebar" aria-label="Toggle navigation">
@@ -41,24 +44,26 @@ export default function MobileNavbar() {
                     </div>
                     <ul className='nav-wrapper flex flex-col gap-x-10'>
                         <li>
-                            <Link href="/" onClick={closeSidebar} className={`${pathName === '/' ? "active-link" : ""} py-[12px] px-[16px] mb-[9px]`}>
+                            <Link href="/" className={`${pathName === '/' ? "active-link" : ""} py-[12px] px-[16px] mb-[9px]`}>
                                 <FontAwesomeIcon className='me-3 text-xl' icon={faHome} />
                                 <span>Feed</span>
                             </Link></li>
                         <li>
-                            <Link href="/profile" onClick={closeSidebar} className={`${pathName === '/profile' ? "active-link" : ""} py-[12px] px-[16px] mb-[9px]`}>
+                            <Link href="/profile" className={`${pathName === '/profile' ? "active-link" : ""} py-[12px] px-[16px] mb-[9px]`}>
                                 <FontAwesomeIcon className='me-3 text-xl' icon={faCircleUser} />
                                 <span>Profile</span>
                             </Link>
                         </li>
                         <li>
-                            <Link href="/explore" onClick={closeSidebar} className={`${pathName === '/explore' ? "active-link" : ""} py-[12px] px-[16px] mb-[9px]`}>
+                            <Link href="/explore" className={`${pathName === '/explore' ? "active-link" : ""} py-[12px] px-[16px] mb-[9px]`}>
                                 <FontAwesomeIcon className='me-3 text-xl' icon={faCompass} />
                                 <span>Explore</span>
                             </Link>
                         </li>
                         <li>
-                            <Link href="/language" onClick={closeSidebar} className={`py-[12px] px-[16px] mb-[9px]`}>
+                            <Link href="" onClick={() => {
+                                setIsOpen(true)
+                            }} className={`py-[12px] px-[16px] mb-[9px]`}>
                                 <FontAwesomeIcon className='me-3 text-xl' icon={faGlobe} />
                                 <span>Language</span>
                             </Link>
@@ -75,15 +80,15 @@ export default function MobileNavbar() {
                                 <div>
                                     <ul>
                                         <li>
-                                            <Link href="/contact" onClick={closeSidebar} className='py-[7px] px-[14px] sp-text' >Contact</Link>
+                                            <Link href="/contact" className='py-[7px] px-[14px] sp-text' >Contact</Link>
                                         </li>
                                         <li>
-                                            <Link href="/faq" onClick={closeSidebar} className='py-[7px] px-[14px] sp-text'>
+                                            <Link href="/faq" className='py-[7px] px-[14px] sp-text'>
                                                 FAQ
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/edit-profile" onClick={closeSidebar} className='py-[7px] px-[14px] sp-text'>
+                                            <Link href="/edit-profile" className='py-[7px] px-[14px] sp-text'>
                                                 Edit Profile
                                             </Link>
                                         </li>
@@ -102,6 +107,7 @@ export default function MobileNavbar() {
                         <button type='button' className={`${styles.sign_in_btn} rounded-xl font-semibold text-base py-3 px-4 w-full`}>Sign In</button>
                     </div>
                 </nav>
+                <LanguageModal isOpen={isOpen} closeModal={() => setIsOpen(false)} />
             </div>
         </div>
 

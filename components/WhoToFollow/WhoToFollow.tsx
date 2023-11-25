@@ -1,7 +1,6 @@
-import dynamic from 'next/dynamic';
+import { PeopleList } from '..'
 import styles from '../../styles/styles.module.css'
 
-const PeopleList = dynamic(() => import("@/components/PeopleList/PeopleList"));
 const WhoToFollow = () => {
     return (
         <div className="rounded-xl bg-footer mt-4">

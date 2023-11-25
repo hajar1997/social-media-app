@@ -2,7 +2,7 @@ import React from 'react'
 import { TweetDropdown, TweetImages, Tweets } from '..'
 import { tweet_replies } from '@/constants'
 import { FunctionComponent } from "react";
-import { OptionsProps, TweetProps, TweetRepliesProps } from "@/types";
+import { OptionsProps, TweetRepliesProps } from "@/types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp, faComment } from "@fortawesome/free-regular-svg-icons";
 import { faEdit, faRetweet, faShareNodes, faTrash } from "@fortawesome/free-solid-svg-icons";
@@ -20,15 +20,13 @@ const options: OptionsProps[] = [
   },
 ];
 
-interface RepliesProps {
-  tweet: TweetRepliesProps;
-}
 
-const Replies: FunctionComponent<RepliesProps> = () => {
+
+const Replies = () => {
 
   return (
     <div className='px-5'>
-      {tweet_replies && tweet_replies.slice(0, 2).map((replies) => (
+      {tweet_replies && tweet_replies.slice(0, 2).map((replies: TweetRepliesProps) => (
         <div className="mt-4 lg:p-5 p-4 bg-footer w-full rounded-[1.3rem] flex gap-4">
           <div>
             <Image src={replies.profile_image} aria-hidden={true} width={60} height={50} priority alt="profile image" className="rounded-full" />

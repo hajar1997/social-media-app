@@ -1,9 +1,9 @@
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { Navbar, MobileNavbar } from '..';
 
 const Header = () => {
+
     return (
         <>
             <Navbar />
@@ -15,8 +15,8 @@ const Header = () => {
                         height={35}
                         alt='logo'
                         style={{
-                            width:"45px",
-                            height:"35px"
+                            width: "45px",
+                            height: "35px"
                         }}
                     />
                 </Link>

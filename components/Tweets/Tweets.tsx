@@ -1,15 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from '../../styles/styles.module.css'
 import { FunctionComponent } from "react";
 import { OptionsProps, TweetProps } from "@/types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp, faComment } from "@fortawesome/free-regular-svg-icons";
 import { faEdit, faRetweet, faShareNodes, faTrash } from "@fortawesome/free-solid-svg-icons";
-import dynamic from "next/dynamic";
-
-const TweetDropdown = dynamic(() => import("@/components/TweetDropdown/TweetDropdown"));
-const TweetImages = dynamic(() => import("@/components/TweetImages/TweetImages"));
+import { TweetDropdown, TweetImages } from "..";
 
 const options: OptionsProps[] = [
   {
