@@ -13,7 +13,7 @@ const EditProfileForm = () => {
         required: '${label} is required!',
         types: {
             email: '${label} is not a valid email!',
-            number: '${label} is not a valid number!',
+            password: '${label} is not a valid password!',
         },
         number: {
             range: '${label} must be between ${min} and ${max}',
@@ -32,7 +32,7 @@ const EditProfileForm = () => {
         console.log(values);
     };
     return (
-        <div className=' mt-12'>
+        <div className='mt-12'>
             <Form
                 layout='vertical'
                 name="nest-messages"

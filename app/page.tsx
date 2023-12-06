@@ -29,7 +29,7 @@ export default function Home() {
 
   return (
     <main className={`lg:py-4 lg:mt-4`}>
-      <div className={`${styles.btnGroup} button-group_wrapper mb-4 px-5`}>
+      <div className={`${styles.btnGroup} button-group_wrapper  mt-[20px] mb-4 px-5`}>
         <Button.Group className='w-[100%]'>
           <Button
             className={`w-full p-2 rounded-l-[1.3rem] ${activeButton === 'FEED' ? 'active-button' : 'inactive-button'}`}

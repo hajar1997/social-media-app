@@ -41,8 +41,8 @@ const TweetDetailModal = ({ isOpen, closeModal, tweet }: TweetDetailModalProps) 
                                 leave='ease-in duration-200'
                                 leaveFrom='opacity-100 scale-100'
                                 leaveTo='opacity-0 scale-95'>
-                                <Dialog.Panel className="relative w-full max-w-[815px]  transform lg:rounded-2xl bg-black text-white shadow-xl transition-all flex flex-col gap-5">
-                                    <div className='flex lg:flex-row flex-col p-5 lg:p-0'>
+                                <Dialog.Panel className="relative w-full max-w-[815px] transform lg:rounded-2xl bg-black text-white shadow-xl transition-all flex flex-col gap-5">
+                                    <div className='flex lg:flex-row flex-col lg:p-0'>
                                         <div className='lg:w-7/12 lg:h-[600px] h-[350px] w-100 lg:static relative'>
                                             <Carousel indicators={tweet.images?.length === 1 ? false : true} leftControl={controlValue} rightControl={controlValue} className='lg:[&>*:first-child]:rounded-r-none [&>*:first-child]:rounded-none' >
                                                 {
