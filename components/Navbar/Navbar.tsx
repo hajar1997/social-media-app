@@ -32,18 +32,18 @@ const Navbar = () => {
                 </div>
                 <ul className='nav-wrapper flex flex-col gap-x-10'>
                     <li>
-                        <Link href="/" className={`${pathName === '/' ? "active-link" : ""} py-[12px] px-[16px] mb-[9px]`}>
+                        <Link prefetch href="/" className={`${pathName === '/' ? "active-link" : ""} py-[12px] px-[16px] mb-[9px]`}>
                             <FontAwesomeIcon className='me-3 text-xl' icon={faHome} />
                             <span>Feed</span>
                         </Link></li>
                     <li>
-                        <Link href="/profile" className={`${pathName === '/profile' ? "active-link" : ""} py-[12px] px-[16px] mb-[9px]`}>
+                        <Link prefetch href="/profile" className={`${pathName === '/profile' ? "active-link" : ""} py-[12px] px-[16px] mb-[9px]`}>
                             <FontAwesomeIcon className='me-3 text-xl' icon={faCircleUser} />
                             <span>Profile</span>
                         </Link>
                     </li>
                     <li>
-                        <Link href="/explore" className={`${pathName === '/explore' ? "active-link" : ""} py-[12px] px-[16px] mb-[9px]`}>
+                        <Link prefetch href="/explore" className={`${pathName === '/explore' ? "active-link" : ""} py-[12px] px-[16px] mb-[9px]`}>
                             <FontAwesomeIcon className='me-3 text-xl' icon={faCompass} />
                             <span>Explore</span>
                         </Link>
@@ -66,15 +66,10 @@ const Navbar = () => {
                             <div>
                                 <ul>
                                     <li>
-                                        <Link href="/contact" className='py-[7px] px-[14px] sp-text' >Contact</Link>
+                                        <Link prefetch href="/contact" className='py-[7px] px-[14px] sp-text' >Contact</Link>
                                     </li>
                                     <li>
-                                        <Link href="/faq" className='py-[7px] px-[14px] sp-text'>
-                                            FAQ
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/edit-profile" className='py-[7px] px-[14px] sp-text'>
+                                        <Link prefetch href="/edit-profile" className='py-[7px] px-[14px] sp-text'>
                                             Edit Profile
                                         </Link>
                                     </li>

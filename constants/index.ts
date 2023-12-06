@@ -1,47 +1,66 @@
 import { TweetProps, TweetRepliesProps } from "@/types";
+import dayjs from "dayjs";
 
 export const users = [
   {
     first_name: "Anisa",
     last_name: "Keena",
     username: "@anisa_keena",
+    email: "anisa@gmail.com",
+    password: "123456",
     job: "Designer",
     avatar: "/rmate2.jpg",
+    dateOfBirth: dayjs("1996/01/01"),
   },
   {
     first_name: "Ima",
     last_name: "Narcisse",
     username: "@ima_narcisse",
+    email: "ima@gmail.com",
+    password: "123456",
     job: "Politician",
     avatar: "/rmate1.jpg",
+    dateOfBirth: dayjs("1996/01/01"),
   },
   {
     first_name: "Lucile",
     last_name: "Felmlee",
     username: "@lucile_felmlee",
+    email: "lucile@gmail.com",
+    password: "123456",
     job: "Politician",
     avatar: "/rmate2.jpg",
+    dateOfBirth: dayjs("1996/01/01"),
   },
   {
     first_name: "Starr",
     last_name: "Shupp",
     username: "@starr_shupp",
+    email: "starr@gmail.com",
+    password: "123456",
     job: "Musician",
     avatar: "/rmate1.jpg",
+    dateOfBirth: dayjs("1996/01/01"),
   },
   {
     first_name: "Macie",
     last_name: "Bellis",
     username: "@macie_bellis",
+    email: "macie@gmail.com",
+    password: "123456",
     job: "Actor",
     avatar: "/rmate2.jpg",
+    dateOfBirth: dayjs("1996/01/01"),
   },
   {
     first_name: "Shane",
     last_name: "Crays",
     username: "@shane_crays",
+    email: "shane@gmail.com",
+    password: "123456",
     job: "Model",
     avatar: "/rmate1.jpg",
+    dateOfBirth: dayjs("1996/01/01"),
   },
 ];
 

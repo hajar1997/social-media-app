@@ -21,6 +21,8 @@ import Posts from "./Posts/Posts";
 import ProfileMedia from "./ProfileMedia/ProfileMedia";
 import ProfileLikes from "./ProfileLikes/ProfileLikes";
 import Replies from "./Replies/Replies";
+import ContactForm from "./ContactForm/ContactForm";
+import EditProfileForm from "./EditProfileForm/EditProfileForm";
 
 export {
   Navbar,
@@ -46,4 +48,6 @@ export {
   ProfileMedia,
   ProfileLikes,
   Replies,
+  ContactForm,
+  EditProfileForm,
 };

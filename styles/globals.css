@@ -83,18 +83,62 @@
 }
 
 .ant-avatar {
-    width: 24px!important;
-    height: 24px!important;
+    width: 24px !important;
+    height: 24px !important;
 }
 
-.ant-avatar-icon{
-    font-size: 13px!important;
+.ant-avatar-icon {
+    font-size: 13px !important;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
 }
 
-.ant-divider{
-    border-block-start:1px solid #292929!important;
+.ant-divider {
+    border-block-start: 1px solid #292929 !important;
+}
+
+.cntc-form .ant-form-item-label>label {
+    color: white !important;
+}
+
+.cntc-form .ant-input,
+.ant-input-password,
+.ant-picker {
+    background-color: #101010 !important;
+    border-radius: 10px !important;
+    border-color: #333538 !important;
+    color: white !important;
+    font-size: 14px !important;
+}
+
+.ant-picker .ant-picker-suffix {
+    color: white !important;
+}
+
+.ant-picker .ant-picker-input>input,
+.ant-radio-wrapper {
+    color: white !important;
+}
+
+.cntc-form .ant-input:focus,
+.ant-input-affix-wrapper:focus-within,
+.ant-picker {
+    border-color: #333538 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.ant-form-item-required::before {
+    display: none !important;
+}
+
+.anticon.ant-input-password-icon {
+    color: white !important;
+}
+
+.ant-radio-inner::after,.ant-radio-checked{
+    background-color: #e76f51!important;
+    color: #e76f51!important;
 }
